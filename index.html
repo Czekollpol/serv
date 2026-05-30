@@ -5,35 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona Startowa</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #0b0b0b; color: #ffffff; display: flex; min-height: 100vh; overflow-x: hidden; }
+        
+        /* Sidebar */
         .sidebar { width: 300px; background-color: #111111; padding: 40px 24px; border-right: 1px solid #1a1a1a; flex-shrink: 0; display: flex; flex-direction: column; }
-        .server-description { font-size: 15px; color: #cccccc; margin-bottom: 40px; font-style: italic; text-align: center; padding-bottom: 20px; border-bottom: 1px solid #1a1a1a; }
+        .server-description { font-size: 15px; color: #cccccc; line-height: 1.5; margin-bottom: 40px; font-style: italic; text-align: center; padding-bottom: 20px; border-bottom: 1px solid #1a1a1a; }
         .menu-title { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #444444; margin-bottom: 15px; font-weight: bold; }
         .menu-list { list-style: none; margin-bottom: auto; }
         .menu-item { margin-bottom: 8px; }
-        .menu-link { display: block; padding: 12px 15px; color: #aaaaaa; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; border-radius: 6px; transition: 0.3s; }
+        .menu-link { display: block; padding: 12px 15px; color: #aaaaaa; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-radius: 6px; transition: all 0.3s ease; }
         .menu-link:hover { color: #ffffff; background-color: #1a1a1a; }
         .menu-item.active .menu-link { color: #ffffff; background-color: #1f1214; border-left: 3px solid #ff3333; }
-        .sidebar-discord-btn { display: flex; align-items: center; justify-content: center; background-color: #5865F2; color: #ffffff; text-decoration: none; padding: 14px; border-radius: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; margin-top: 20px; text-align: center; }
+        .sidebar-discord-btn { display: flex; align-items: center; justify-content: center; background-color: #5865F2; color: #ffffff; text-decoration: none; padding: 14px; border-radius: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; margin-top: 20px; text-align: center; }
+        
+        /* Main Content */
         .main-content { flex-grow: 1; padding: 60px 80px; overflow-y: auto; max-width: 1300px; }
-        .hero-title { font-size: 42px; font-weight: 800; margin-bottom: 20px; }
-        .hero-text { color: #aaaaaa; font-size: 16px; margin-bottom: 35px; }
+        .hero-section { margin-bottom: 50px; }
+        .hero-subtitle { color: #ff3333; text-transform: uppercase; font-size: 13px; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px; }
+        .hero-title { font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+        .hero-text { color: #aaaaaa; font-size: 16px; max-width: 700px; line-height: 1.6; }
     </style>
 </head>
 <body>
+
     <div class="sidebar">
         <div class="server-description">"Płatny hosting, a Ty grasz za darmo!"</div>
+        
         <div class="menu-title">Nawigacja</div>
         <ul class="menu-list">
-            <li class="menu-item active"><a href="/serv/" class="menu-link">Strona Główna</a></li>
-            <li class="menu-item"><a href="/serv/RO/" class="menu-link">Regulamin Serwera</a></li>
+            <li class="menu-item active">
+                <a href="/serv/" class="menu-link">Strona Główna</a>
+            </li>
+            <li class="menu-item">
+                <a href="/serv/RO/" class="menu-link">Regulamin Serwera</a>
+            </li>
+            <li class="menu-item">
+                <a href="/serv/RG/" class="menu-link">Regulamin Gildii</a>
+            </li>
         </ul>
-        <a href="https://discord.gg/cdfzvznGDh" target="_blank" class="sidebar-discord-btn">Dołącz do Discorda</a>
+
+        <a href="https://discord.gg/cdfzvznGDh" target="_blank" class="sidebar-discord-btn">
+            Dołącz do Discorda
+        </a>
     </div>
+
     <div class="main-content">
-        <h1 class="hero-title">Odkryj nowy wymiar stabilnej rozgrywki</h1>
-        <p class="hero-text">Wejdź do gry na najlepiej zoptymalizowanym serwerze w społeczności.</p>
+        <div class="hero-section">
+            <div class="hero-subtitle">Witaj graczu</div>
+            <h1 class="hero-title">Odkryj nowy wymiar stabilnej rozgrywki</h1>
+            <p class="hero-text">
+                Wejdź do gry na najlepiej zoptymalizowanym serwerze w społeczności. Dbamy o najwyższą jakość technologiczną, unikalne rozwiązania oraz brak jakichkolwiek lagów.
+            </p>
+        </div>
     </div>
+
 </body>
 </html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulamin Serwera</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* PANEL BOCZNY (Sidebar) */
+        .sidebar {
+            width: 300px;
+            background-color: #111111;
+            padding: 40px 24px;
+            border-right: 1px solid #1a1a1a;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Opis w panelu bocznym */
+        .server-description {
+            font-size: 15px;
+            color: #cccccc;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            font-style: italic;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .menu-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #444444;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .menu-list {
+            list-style: none;
+        }
+
+        .menu-list.main-nav {
+            margin-bottom: 30px;
+        }
+
+        .menu-list.rules-nav {
+            margin-bottom: auto; /* Pcha przycisk Discorda na dół */
+        }
+
+        .menu-item {
+            margin-bottom: 8px;
+        }
+
+        .menu-link {
+            display: block;
+            padding: 12px 15px;
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-link:hover {
+            color: #ffffff;
+            background-color: #1a1a1a;
+        }
+
+        .menu-item.active .menu-link {
+            color: #ffffff;
+            background-color: #1f1214;
+            border-left: 3px solid #ff3333;
+        }
+
+        /* Przycisk Discord */
+        .sidebar-discord-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #5865F2;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .sidebar-discord-btn:hover {
+            background-color: #4752c4;
+            transform: translateY(-2px);
+        }
+
+        /* GŁÓWNA ZAWARTOŚĆ (Content) */
+        .main-content {
+            flex-grow: 1;
+            padding: 60px 80px;
+            overflow-y: auto;
+            max-width: 1300px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .rules-container {
+            background-color: #121212;
+            border: 1px solid #1c1c1c;
+            border-radius: 8px;
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        .rules-section-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 35px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .rules-group {
+            margin-bottom: 30px;
+        }
+
+        .rules-group h3 {
+            font-size: 15px;
+            color: #e5e5e5;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 6px;
+        }
+
+        .rule-item {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 12px;
+            padding-left: 10px;
+        }
+
+        .penalty {
+            color: #ff3333;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        .cheat-list {
+            margin-top: 5px;
+            margin-left: 20px;
+            color: #b5b5b5;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Panel Boczny -->
+    <div class="sidebar">
+        <div class="server-description">"Płatny hosting, a Ty grasz za darmo!"</div>
+        
+        <div class="menu-title">Nawigacja</div>
+        <ul class="menu-list main-nav">
+            <li class="menu-item">
+                <a href="/" class="menu-link">⬅ Strona Główna</a>
+            </li>
+        </ul>
+
+        <div class="menu-title">Regulamin serwera</div>
+        <ul class="menu-list rules-nav">
+            <li class="menu-item active">
+                <a href="/RO" class="menu-link">Zasady ogólne</a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">Regulamin gildii</a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">Regulamin administracji</a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">Regulamin eventów</a>
+            </li>
+        </ul>
+
+        <a href="https://discord.gg/cdfzvznGDh" target="_blank" class="sidebar-discord-btn">
+            Dołącz do Discorda
+        </a>
+    </div>
+
+    <!-- Główna Zawartość -->
+    <div class="main-content">
+        <h1 class="page-title">Ogólne zasady serwera</h1>
+        
+        <div class="rules-container">
+            <div class="rules-section-title">1. Zasady ogólne serwera</div>
+            
+            <!-- Rozdział 1 -->
+            <div class="rules-group">
+                <h3>1. Konto i postać</h3>
+                <div class="rule-item"><strong>1.1</strong> Każdy gracz może posiadać wyłącznie jedno konto. Multikonta oraz omijanie banów są surowo zabronione i karane <span class="penalty">BANEM lub PERMBANEM</span>.</div>
+                <div class="rule-item"><strong>1.2</strong> Zakładając konto, gracz automatycznie akceptuje regulamin serwera i zobowiązuje się do jego przestrzegania.</div>
+                <div class="rule-item"><strong>1.3</strong> Administracja nie ponosi odpowiedzialności za konto gracza w przypadku udostępnienia danych, oszustwa lub włamania.</div>
+                <div class="rule-item"><strong>1.4</strong> Zabronione jest sprzedawanie, wymienianie lub udostępnianie konta osobom trzecim. | <span class="penalty">PERMBAN</span></div>
+                <div class="rule-item"><strong>1.5</strong> Gracz nie może posiadać więcej niż jednej postaci w tej samej frakcji w tym samym czasie. | <span class="penalty">BAN</span></div>
+            </div>
+
+            <!-- Rozdział 2 -->
+            <div class="rules-group">
+                <h3>2. Kultura i zachowanie na serwerze</h3>
+                <div class="rule-item"><strong>2.1</strong> Zabronione jest używanie wulgaryzmów, przeklinanie oraz stosowanie treści obraźliwych, rasistowskich, seksualnych lub nieodpowiednich (również w formie skrótów, zamienników i cenzurowania znakami). | <span class="penalty">MUTE / BAN</span></div>
+                <div class="rule-item"><strong>2.2</strong> Zakazane jest obrażanie innych graczy, wyśmiewanie, prowokowanie konfliktów, groźby oraz nękanie. | <span class="penalty">MUTE / BAN</span></div>
+                <div class="rule-item"><strong>2.3</strong> Zabronione jest promowanie alkoholu, narkotyków, przemocy oraz innych treści nieodpowiednich dla młodszych graczy. | <span class="penalty">BAN</span></div>
+                <div class="rule-item"><strong>2.4</strong> Spam, flood, nadmierne używanie caps locka oraz zaśmiecanie czatu jest zabronione. | <span class="penalty">MUTE / WARN</span></div>
+            </div>
+
+            <!-- Rozdział 3 -->
+            <div class="rules-group">
+                <h3>3. Moderacja i zgłoszenia</h3>
+                <div class="rule-item"><strong>3.1</strong> Prywatne wiadomości między graczami nie są moderowane przez administrację serwera.</div>
+            </div>
+
+            <!-- Rozdział 4 -->
+            <div class="rules-group">
+                <h3>4. Szczególnie zakazane</h3>
+                <div class="rule-item">
+                    <strong>4.1 Cheaty i nieuczciwe oprogramowanie</strong><br>
+                    Bezwzględnie zabrania się używania jakichkolwiek cheatów, hacków lub modyfikacji dających przewagę, np.:
+                    <div class="cheat-list">X-Ray, KillAura, Fly, Speed, Reach, ESP, AutoClicker, FreeCam, Scaffold, Minimap, Mapy i inne.</div>
+                    | <span class="penalty">PERMBAN</span>
+                </div>
+                <div class="rule-item"><strong>4.2 Niedozwolone modyfikacje i klienci</strong><br>Korzystanie z klienta lub modów, które ingerują w mechanikę gry lub omijają zabezpieczenia serwera. | <span class="penalty">BAN / PERMBAN</span></div>
+                <div class="rule-item"><strong>4.3 Wykorzystywanie bugów i exploitów</strong><br>Duplikacja itemów, glitchowanie, bugowanie farm lub mechanik serwera. Niezgłoszenie błędu administracji również podlega karze. | <span class="penalty">BAN / PERMBAN</span></div>
+                <div class="rule-item"><strong>4.4 Griefing i niszczenie rozgrywki</strong><br>Celowe niszczenie budowli, blokowanie dostępu, trollowanie, utrudnianie gry innym. | <span class="penalty">BAN</span></div>
+                <div class="rule-item"><strong>4.5 Nadużywanie mechanik gry</strong><br>AFK farmy omijające zabezpieczenia, alt-konta do zysku, sztuczne nabijanie statystyk. | <span class="penalty">BAN</span></div>
+                <div class="rule-item"><strong>4.6 Podszywanie się i manipulacja</strong><br>Podszywanie się pod administrację, fałszowanie dowodów lub zgłoszeń. | <span class="penalty">PERMBAN</span></div>
+                <div class="rule-item"><strong>4.7 Współudział</strong><br>Świadome wspieranie osoby łamiącej regulamin również podlega karze. | <span class="penalty">BAN / PERMBAN</span></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

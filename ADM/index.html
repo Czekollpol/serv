@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pytania weryfikacyjne - Regulamin</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0b0b0b; color: #ffffff; display: flex; min-height: 100vh; }
+        .sidebar { width: 300px; background-color: #111111; padding: 40px 24px; border-right: 1px solid #1a1a1a; flex-shrink: 0; }
+        .main-content { flex-grow: 1; padding: 60px 80px; overflow-y: auto; }
+        .page-title { font-size: 28px; font-weight: 700; margin-bottom: 30px; letter-spacing: 0.5px; }
+        .rules-container { background-color: #121212; border: 1px solid #1c1c1c; border-radius: 8px; padding: 40px; line-height: 1.6; }
+        .question-item { margin-bottom: 15px; padding-left: 10px; color: #cccccc; font-size: 14px; border-bottom: 1px solid #1c1c1c; padding-bottom: 10px; }
+        .rules-section-title { font-size: 18px; font-weight: 700; margin-bottom: 25px; color: #ff3333; }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="menu-title" style="color: #444; font-size: 11px; margin-bottom: 20px;">Nawigacja</div>
+        <a href="/" style="color: #aaa; text-decoration: none; display: block; font-size: 13px;">⬅ Powrót do regulaminu</a>
+    </div>
+
+    <div class="main-content">
+        <h1 class="page-title">Pytania kontrolne do regulaminu</h1>
+        <div class="rules-container">
+            <div class="rules-section-title">Lista pytań weryfikacyjnych</div>
+            
+            <div id="questions-list">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            "1. Ile kont może posiadać jeden gracz na serwerze?", "2. Jaka kara grozi za używanie multikont?", 
+            "3. Czy gracz ma prawo do odwołania się od bana, jeśli stracił dostęp do konta przez udostępnienie hasła?", 
+            "4. Co dzieje się z graczem, który sprzedaje lub wymienia swoje konto na inne dobra?", 
+            "5. Czy moment założenia konta jest równoznaczny z akceptacją regulaminu?", 
+            "6. Kto ponosi odpowiedzialność w przypadku włamania na konto, do którego gracz udostępnił dane?", 
+            "7. Czy używanie ocenzurowanych wulgaryzmów jest dozwolone?", "8. Jakie kary przewidziane są za obrażanie innych graczy?", 
+            "9. Czy na serwerze można poruszać tematy związane z narkotykami lub alkoholem?", 
+            "10. Co oznacza termin „spam” i jak może zostać ukarany?", "11. Czy nadużywanie Caps Locka jest akceptowalne?", 
+            "12. Jakie zachowania kwalifikują się jako „nękanie” innych graczy?", "13. Czy administracja ingeruje w prywatne wiadomości (PW)?", 
+            "14. Do kogo należy zgłosić znalezienie błędu (buga) na serwerze?", 
+            "15. Podaj 3 przykłady modyfikacji typu „cheat”, za które grozi PERMBAN.", 
+            "16. Czy używanie minimapy jest dozwolone zgodnie z punktem 4.1?", 
+            "17. Co grozi graczowi za celowe wykorzystywanie bugów w mechanikach gry?", 
+            "18. Czy niezgłoszenie administracji znalezionego błędu jest karane?", 
+            "19. Co oznacza termin „Griefing”?", "20. Czy blokowanie dostępu do bazy innego gracza jest zakazane?", 
+            "21. Czy „AFK farmy” omijające zabezpieczenia są dozwolone?", "22. Czy można sztucznie nabijać statystyki za pomocą dodatkowych kont?", 
+            "23. Jaka kara czeka gracza za podszywanie się pod członka administracji?", 
+            "24. Czy współudział w łamaniu regulaminu również podlega karze?", 
+            "25. Jakie kary mogą spotkać osobę używającą „AutoClickera”?", "26. Czy posiadanie modyfikacji typu „Reach” jest dozwolone?", 
+            "27. Czy gracz może tłumaczyć się nieznajomością regulaminu gildii?", 
+            "28. Kto w gildii odpowiada za porządek i kontakty z administracją?", 
+            "29. Czy każda gildia musi posiadać własny serwer Discord?", 
+            "30. Czego wymaga procedura „weryfikacji” gildii przez Kuratora?", 
+            "31. Jaką rolę pełni Kurator w gildii?", 
+            "32. Co się dzieje, jeśli gildia nie wyznaczy Kuratora lub nie utrzyma serwera Discord?", 
+            "33. Co gracz musi zrobić z ekwipunkiem gildyjnym w momencie odejścia z gildii?", 
+            "34. Czy w gildii można szerzyć treści polityczne?", 
+            "35. Czy okradanie depozytu gildyjnego jest dozwolone w ramach konfliktów?", 
+            "36. Jak należy rozwiązywać konflikty wewnątrz gildii?", 
+            "37. Czy członkowie gildii mają obowiązek wspierania się w obronie?", 
+            "38. Czy można przekazywać wrogim frakcjom informacje o lokalizacji bazy?", 
+            "39. Kto musi wyrazić zgodę na przeniesienie gracza między gildiami?", 
+            "40. Czy celowe niszczenie struktur wewnątrz własnej gildii jest zabronione?"
+        ];
+
+        const container = document.getElementById('questions-list');
+        questions.forEach(q => {
+            const div = document.createElement('div');
+            div.className = 'question-item';
+            div.innerText = q;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>

@@ -3,62 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona Startowa</title>
+    <title>Regulamin Gildii</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #0b0b0b; color: #ffffff; display: flex; min-height: 100vh; overflow-x: hidden; }
-        
-        /* Sidebar */
-        .sidebar { width: 300px; background-color: #111111; padding: 40px 24px; border-right: 1px solid #1a1a1a; flex-shrink: 0; display: flex; flex-direction: column; }
-        .server-description { font-size: 15px; color: #cccccc; line-height: 1.5; margin-bottom: 40px; font-style: italic; text-align: center; padding-bottom: 20px; border-bottom: 1px solid #1a1a1a; }
-        .menu-title { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #444444; margin-bottom: 15px; font-weight: bold; }
-        .menu-list { list-style: none; margin-bottom: auto; }
-        .menu-item { margin-bottom: 8px; }
-        .menu-link { display: block; padding: 12px 15px; color: #aaaaaa; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-radius: 6px; transition: all 0.3s ease; }
-        .menu-link:hover { color: #ffffff; background-color: #1a1a1a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #0b0b0b; color: #ffffff; display: flex; min-height: 100vh; }
+        .sidebar { width: 300px; background-color: #111111; padding: 40px 24px; border-right: 1px solid #1a1a1a; }
+        .menu-title { font-size: 11px; text-transform: uppercase; color: #444444; margin: 20px 0 12px; font-weight: bold; }
+        .menu-list { list-style: none; }
+        .menu-link { display: block; padding: 12px 15px; color: #aaaaaa; text-decoration: none; font-size: 13px; border-radius: 6px; }
+        .menu-link:hover { background-color: #1a1a1a; color: #ffffff; }
         .menu-item.active .menu-link { color: #ffffff; background-color: #1f1214; border-left: 3px solid #ff3333; }
-        .sidebar-discord-btn { display: flex; align-items: center; justify-content: center; background-color: #5865F2; color: #ffffff; text-decoration: none; padding: 14px; border-radius: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; margin-top: 20px; text-align: center; }
-        
-        /* Main Content */
-        .main-content { flex-grow: 1; padding: 60px 80px; overflow-y: auto; max-width: 1300px; }
-        .hero-section { margin-bottom: 50px; }
-        .hero-subtitle { color: #ff3333; text-transform: uppercase; font-size: 13px; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px; }
-        .hero-title { font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
-        .hero-text { color: #aaaaaa; font-size: 16px; max-width: 700px; line-height: 1.6; }
+        .main-content { flex-grow: 1; padding: 60px; max-width: 900px; }
+        .rules-container { background-color: #121212; border: 1px solid #1c1c1c; padding: 40px; border-radius: 8px; line-height: 1.6; }
+        h1 { margin-bottom: 20px; }
+        h2 { margin: 25px 0 10px; font-size: 18px; color: #ff3333; }
+        p { margin-bottom: 10px; color: #cccccc; font-size: 14px; }
     </style>
 </head>
 <body>
-
     <div class="sidebar">
-        <div class="server-description">"Płatny hosting, a Ty grasz za darmo!"</div>
-        
         <div class="menu-title">Nawigacja</div>
         <ul class="menu-list">
-            <li class="menu-item active">
-                <a href="/serv/" class="menu-link">Strona Główna</a>
-            </li>
-            <li class="menu-item">
-                <a href="/serv/RO/" class="menu-link">Regulamin Serwera</a>
-            </li>
-            <li class="menu-item">
-                <a href="/serv/RG/" class="menu-link">Regulamin Gildii</a>
-            </li>
+            <li class="menu-item"><a href="/serv/" class="menu-link">⬅ Strona Główna</a></li>
         </ul>
-
-        <a href="https://discord.gg/cdfzvznGDh" target="_blank" class="sidebar-discord-btn">
-            Dołącz do Discorda
-        </a>
+        <div class="menu-title">Regulaminy</div>
+        <ul class="menu-list">
+            <li class="menu-item"><a href="/serv/RO/" class="menu-link">Zasady ogólne</a></li>
+            <li class="menu-item active"><a href="/serv/RG/" class="menu-link">Regulamin gildii</a></li>
+        </ul>
     </div>
-
     <div class="main-content">
-        <div class="hero-section">
-            <div class="hero-subtitle">Witaj graczu</div>
-            <h1 class="hero-title">Odkryj nowy wymiar stabilnej rozgrywki</h1>
-            <p class="hero-text">
-                Wejdź do gry na najlepiej zoptymalizowanym serwerze w społeczności. Dbamy o najwyższą jakość technologiczną, unikalne rozwiązania oraz brak jakichkolwiek lagów.
-            </p>
+        <div class="rules-container">
+            <h1>Regulamin Gildii</h1>
+            
+            <h2>1. Postanowienia ogólne, założenie i organizacja</h2>
+            <p>1.1. Każdy członek gildii ma obowiązek zapoznać się z regulaminem i przestrzegać jego zasad. Nieznajomość regulaminu nie zwalnia z odpowiedzialności.</p>
+            <p>1.2. Każda nowo powstająca gildia musi wyznaczyć Leadera oraz V-Leadera, którzy odpowiadają za porządek i reprezentowanie gildii przed administracją.</p>
+            <p>1.3. Komunikacja: Każda gildia jest zobowiązana do posiadania własnego serwera Discord.</p>
+            <p>1.4. Przeniesienie z jednej gildii do drugiej wymaga zgody obu liderów lub kuratora.</p>
+            <p>1.5. Weryfikacja (Kurator): Po założeniu gildii i przygotowaniu serwera Discord, przedstawiciele gildii muszą zgłosić się do Administracji w celu przydzielenia gildii Kuratora. Kurator będzie posiadał wgląd w serwer Discord gildii w celu monitorowania przestrzegania regulaminu serwera oraz pomocy w rozwiązywaniu sporów. Brak aktywnego serwera Discord lub brak wyznaczonego Kuratora może skutkować rozwiązaniem gildii.</p>
+            <p>1.6. Po opuszczeniu gildii należy zwrócić cały sprzęt gildyjny (np. miecze, kilofy itp.).</p>
+
+            <h2>2. Zasady gry i kultura</h2>
+            <p>2.1. Obowiązuje zakaz obrażania, wyzywania oraz nękania innych graczy. Zabrania się szerzenia mowy nienawiści oraz treści politycznych.</p>
+            <p>2.2. Zabrania się okradania depozytu gildyjnego oraz celowego niszczenia struktur (griefingu). Wszelkie konflikty wewnętrzne należy rozwiązywać w sposób kulturalny.</p>
+            <p>2.3. Członkowie gildii powinni aktywnie wspierać się w budowie i obronie. Zabrania się przekazywania informacji o lokalizacji bazy wrogim frakcjom.</p>
         </div>
     </div>
-
 </body>
 </html>
